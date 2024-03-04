@@ -1,0 +1,170 @@
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #302C42;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+@media screen and (min-width: 1700px) {
+    .navbar {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+
+.navbarImg {
+    width: 200px;
+    height: 200px;
+}
+
+.navbarLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbarLinks li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 2.5rem;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.navbarLinks li a:hover {
+    color: #8176AF;
+}
+
+.navbarLinks li:last-child {
+    margin-right: 0;
+}
+
+.navbarBtn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnLink {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+@media screen and (min-width: 1109px) {
+    .navbarBtn {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.btnDefault {
+    padding: .6rem 1.3rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbarBtnSignUp {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.navbarBtnSignUp:hover {
+    background-color: #C0B7E8;
+    color: #343045;
+    border: none;
+}
+
+.navbarBtnLogin {
+    color: #343045;
+    background-color: #C0B7E8;
+    outline: none;
+}
+
+.navbarBtnLogin:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.mobileMenu {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbarBtn {
+        display: none;
+    }
+}
+
+/* mobile menu */
+@media screen and (max-width: 678px) {
+    .navbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .navbarLinks {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mobileMenu-Img {
+        width: 30px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .mobileMenuLinks {
+        list-style: none;
+        position: fixed;
+        top: 4rem;
+        z-index: 100;
+        background: hsl(0 0% 0% / 0.9);
+        inset: 0 0 0 0%;
+        padding: 7rem 4rem;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 2rem;
+        transition: transform 350ms ease-out;
+    }
+
+    .mobileMenuLinks li a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .mobileBtn {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}

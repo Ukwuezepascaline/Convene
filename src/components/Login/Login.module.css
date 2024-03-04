@@ -1,0 +1,78 @@
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+
+.loginImg {
+    width: 100px;
+}
+
+.loginBtn {
+    background-color: transparent;
+    border: 1px solid #302C42;
+    width: 50%;
+}
+
+.loginForm {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 24px 0px, rgba(0, 0, 0, 0.05) 0px 20px 48px 0px, rgba(0, 0, 0, 0.1) 0px 1px 4px 0px;
+    padding: 32px 32px;
+    background-color: #302C42;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginBox label {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.loginBox input {
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid white;
+    padding: .4rem;
+    caret-color: #8176AF;
+    color: #8176AF;
+}
+
+.forgot {
+
+        color: #8176AF;
+        cursor: pointer;
+        font-size: 12px;
+    
+}
+
+.loginPwd {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.question {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.questionLink {
+    margin-left: .5rem;
+    text-decoration: none;
+    color: #8176AF;
+    font-weight: 600;
+}
