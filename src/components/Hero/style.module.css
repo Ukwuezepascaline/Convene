@@ -1,0 +1,70 @@
+.heroContainer {
+    background-color: #302C42;
+    color: rgb(215, 216, 218);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 885px) {
+    .heroContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        height: fit-content;
+        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .mainHeading {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .paragraph { 
+        text-align: center;
+    }
+
+    .backgroundImage {
+        margin-top: 3.5rem;
+    }
+}
+
+.mainHeading {
+    padding-top: 50px;
+    font-weight: 900;
+    font-size: 45px;
+    max-width: 600px;
+    text-transform:capitalize
+}
+
+.paragraph {
+    margin-top: 2rem;
+}
+
+.backgroundImage {
+    width: 100%;
+    max-width: 450px;
+    /* padding-left: 100px; */
+    /* padding-top: 150px; */
+    /* padding-right: 50px;
+    padding-bottom: 200px; */
+    /* height: 50vh; */
+}
+
+@media screen and (max-width: 768px) {
+    .backgroundImage {
+        margin-top: 1rem;
+    }
+    .mainHeading {
+        font-size: 25px;
+    }
+}
