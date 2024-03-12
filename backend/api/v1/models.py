@@ -2,11 +2,14 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from sqlalchemy import ForeignKey
 from flask_login import UserMixin
+from werkzeug.security import check_password_hash, generate_password_hash
 
 db = SQLAlchemy()
 
 
 class User(db.Model, UserMixin):
+    password_hash = None
+
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
@@ -16,6 +19,12 @@ class User(db.Model, UserMixin):
     events = relationship('Event', secondary='rsvp', backref='attendees')
     questions = relationship('Question', backref='user')
     comments = relationship('Comment', backref='user')
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
 
 
 class Event(db.Model):
