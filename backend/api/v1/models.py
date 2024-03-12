@@ -20,6 +20,13 @@ class User(db.Model, UserMixin):
     questions = relationship('Question', backref='user')
     comments = relationship('Comment', backref='user')
 
+    def __init__(self, **kwargs):
+        """initialize the user model"""
+        self.username = kwargs.get('username')
+        self.email = kwargs.get('email')
+        self.set_password(kwargs.get('password'))
+        self.password = self.password_hash
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
