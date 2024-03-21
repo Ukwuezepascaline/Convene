@@ -13,6 +13,12 @@ jwt = JWTManager(app)
 db.init_app(app)
 
 
+
+@app.route('/api/v1/test', methods=['GET'])
+def test_function():
+    # db.create_all()
+    return jsonify({'message': 'Backend test was successful.'}), 200
+
 @app.route('/api/v1/signup', methods=['POST'])
 def signup():
     data = request.json
